@@ -26,8 +26,8 @@ Dictionaries are lists where the indexes or **keys** are not set by their positi
 ```
     names = {
         'first'  : 'Bobby',
-        'middle' : 'Ray',
-        'last'   : 'Keith' 
+        'midd 'last'  le' : 'Ray',
+        : 'Keith' 
     }
 
 ```
