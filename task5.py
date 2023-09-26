@@ -73,18 +73,19 @@ while f == True:
     action = input(">")
     action = action.split(" ")
     if action[0] == "get":
-        if action[1] in dict:
-            dict[action[1]]+=1
+        if action[-1] in dict:
+            if action[1] in dict:
+                dict[action[1]]+= 1
+            else:
+                dict[action[-1]]+= int(action[1])
         else: print("enter something real")
-        print(f"you now have {dict[action[1]]}")
+        print(f"you now have {dict[action[-1]]}")
     elif action[0] == "drop":
         if dict[action[1]] == 0:
             print("you cant do that")
         else:
-            if action[1] in dict:
-                dict[action[1]]-=1
-            else: print("enter something real")
-            print(dict[action[1]])
+            dict[action[-1]]-= 1
+            
     elif action[0] == "inv" or action[0] == "inventory":
         for i in dict:
             if dict[i] >0:
